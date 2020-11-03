@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>naganox gmp map03</title>
+</head>
+
+<body>
+  <h1>Google Maps Platform</h1>
+  <h2>Dynamic Maps（インタラクティブでカスタマイズ可能な地図を表示）</h2>
+  <h3>Dynamic Maps 03 (マーカー表示 周辺含む)</h3>
+  <h4>志茂田小学校</h4>
+  <p>および 道塚小学校、タイヤ公園</p>
+  <div id="map" style="width:620px; height:400px"></div>
+  <script>
+    function initMap() {
+      const place = { lat: 35.555279, lng: 139.711626 };
+      // 35.555279, 139.711626
+      const _map = new google.maps.Map(document.getElementById('map'), {
+        center: place,
+        zoom: 15
+      });
+      new google.maps.Marker({
+        position: place,
+        map: _map,
+        title: "志茂田小学校",
+        icon: {
+          fillColor: "#ff6347",                //塗り潰し色
+          fillOpacity: 0.8,                    //塗り潰し透過率
+          path: google.maps.SymbolPath.CIRCLE, //円を指定
+          scale: 6,                           //円のサイズ
+          strokeColor: "#ff4500",              //枠の色
+          strokeWeight: 1.0                    //枠の透過率
+        }
+      });
+
+      const place2 = { lat: 35.558487, lng: 139.707179 };
+      new google.maps.Marker({
+        position: place2,
+        map: _map,
+        title: "道塚小学校",
+        icon: {
+          fillColor: "#00ff00",                //塗り潰し色
+          fillOpacity: 0.8,                    //塗り潰し透過率
+          path: google.maps.SymbolPath.CIRCLE, //円を指定
+          scale: 6,                           //円のサイズ
+          strokeColor: "#32cd32",              //枠の色
+          strokeWeight: 1.0                    //枠の透過率
+        }
+      });
+
+      const place3 = { lat: 35.553050, lng: 139.711675 };
+      new google.maps.Marker({
+        position: place3,
+        map: _map,
+        title: "タイヤ公園",
+        icon: {
+          fillColor: "#00ff00",                //塗り潰し色
+          fillOpacity: 0.8,                    //塗り潰し透過率
+          path: google.maps.SymbolPath.CIRCLE, //円を指定
+          scale: 6,                           //円のサイズ
+          strokeColor: "#32cd32",              //枠の色
+          strokeWeight: 1.0                    //枠の透過率
+        }
+      });
+
+    }
+  </script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKirYFci0Fn1rE8RhNRNCvihb54L5g4L0&callback=initMap">
+    </script>
+</body>
+
+</html>
