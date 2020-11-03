@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>naganox gmp map02</title>
+</head>
+
+<body>
+  <h1>Google Maps Platform</h1>
+  <h2>Dynamic Maps（インタラクティブでカスタマイズ可能な地図を表示）</h2>
+  <h3>Dynamic Maps 02 (マーカー表示)</h3>
+  <h4>志茂田小学校</h4>
+  <div id="map" style="width:620px; height:400px"></div>
+  <script>
+    function initMap() {
+      const place = { lat: 35.555279, lng: 139.711626 };
+      // 35.555279, 139.711626
+      const _map = new google.maps.Map(document.getElementById('map'), {
+        center: place,
+        zoom: 15
+      });
+      new google.maps.Marker({
+        position: myLatLng,
+        map: _map,
+        title: "志茂田小学校",
+      });
+    }
+  </script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKirYFci0Fn1rE8RhNRNCvihb54L5g4L0&callback=initMap">
+    </script>
+</body>
+
+</html>
