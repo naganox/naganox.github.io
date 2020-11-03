@@ -3,36 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>naganox home</title>
-  <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKirYFci0Fn1rE8RhNRNCvihb54L5g4L0&callback=initMap">
-    </script>
-  <style>
-    #map {
-      height: 100%;
-    }
-
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+  <title>naganox gmp map01</title>
 </head>
 
 <body>
   <h1>Google Maps Platform</h1>
   <h2>Dynamic Maps（インタラクティブでカスタマイズ可能な地図を表示）</h2>
   <h3>Dynamic Maps 01 (座標から地図を表示)</h3>
-  <div id="map"></div>
+  <h4>志茂田小学校</h4>
+  <div id="map" style="width:620px; height:400px"></div>
   <script>
-    // 35.555279, 139.711626
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: 35.555279, lng: 139.711626 },
-      zoom: 10
-    });
+    function initMap() {
+      // 35.555279, 139.711626
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 35.555279, lng: 139.711626 },
+        zoom: 10
+      });
+    }
   </script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKirYFci0Fn1rE8RhNRNCvihb54L5g4L0&callback=initMap">
+    </script>
 </body>
 
 </html>
